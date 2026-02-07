@@ -107,7 +107,9 @@ class CarSpecificEvents:
         events.add(EventName.resumeRequired)
 
     elif self.CP.brand == 'volkswagen':
-      events = self.create_common_events(CS, CS_prev, extra_gears=[GearShifter.eco, GearShifter.sport, GearShifter.manumatic],
+      events = self.create_common_events(CS, CS_prev,
+                                         extra_gears=[GearShifter.eco, GearShifter.sport,
+                                                      GearShifter.manumatic, GearShifter.neutral],
                                          pcm_enable=self.CP.pcmCruise)
 
       if self.CP.openpilotLongitudinalControl:
